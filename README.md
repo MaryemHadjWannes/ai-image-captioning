@@ -20,6 +20,6 @@ A simple Streamlit app that uses the BLIP model to generate captions for any upl
 pip install streamlit transformers torch torchvision Pillow
 streamlit run ai_image_captioning_app.py
 ```
+![image](https://github.com/user-attachments/assets/c2c4b6f2-0c64-46ca-9123-8211b92f48a2)
 
-![image](https://github.com/user-attachments/assets/60e07b76-cad6-4d11-9279-c6ee07ccb5b3)
 
