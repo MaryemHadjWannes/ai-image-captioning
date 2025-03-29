@@ -2,7 +2,12 @@
 
 import streamlit as st
 from PIL import Image
-from transformers import BlipProcessor, BlipForConditionalGeneration
+from transformers import (
+    BlipProcessor,
+    BlipForConditionalGeneration,
+    Blip2Processor,
+    Blip2ForConditionalGeneration
+)
 import torch
 
 st.set_page_config(page_title="AI Image Captioning", layout="centered")
@@ -17,8 +22,8 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image", use_column_width=True)
 
     with st.spinner("Generating caption..."):
-        processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-        model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
+        processor = Blip2Processor.from_pretrained("Salesforce/blip2-flan-t5-xl")
+        model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-flan-t5-xl")
 
         inputs = processor(images=image, return_tensors="pt")
         out = model.generate(**inputs)
