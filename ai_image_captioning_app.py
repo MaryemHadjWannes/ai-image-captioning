@@ -1,5 +1,3 @@
-# ai_image_captioning_app.py
-
 import streamlit as st
 from PIL import Image
 from transformers import (
@@ -31,4 +29,3 @@ if uploaded_file is not None:
 
     st.success("Here's the AI caption:")
     st.write(f"**{caption}**")
-
