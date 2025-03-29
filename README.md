@@ -1,6 +1,6 @@
 # 📷 AI Image Captioning App
 
-A simple Streamlit app that uses the BLIP model to generate captions for any uploaded image.
+A simple Streamlit app that uses the BLIP/BLIP2 models to generate captions for any uploaded image.
 
 ## 🚀 How It Works
 1. Upload an image (jpg/png)
